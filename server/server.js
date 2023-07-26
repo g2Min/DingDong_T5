@@ -9,6 +9,7 @@ const authRoute = require('./routes/auth');
 const questionRoute = require('./routes/question');
 const userRoute = require('./routes/user');
 const answerRoute = require('./routes/answer');
+const searchRoute = require('./routes/search');
 
 dotenv.config();
 app.use(bodyParser.json());
@@ -26,5 +27,6 @@ app.use('/api/auth', authRoute);
 app.use('/api/articles', questionRoute);
 app.use('/api/users', userRoute);
 app.use('/api/answer', answerRoute);
+app.use('/api/search', searchRoute);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

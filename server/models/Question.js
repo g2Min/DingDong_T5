@@ -11,10 +11,12 @@ const QuestionSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
+      index: true,
     },
     content: {
       type: String,
       required: true,
+      index: true,
     },
     votes: {
       type: Number,
@@ -38,8 +40,9 @@ const QuestionSchema = new mongoose.Schema(
       required: true,
     },
     hashtags: {
-      type: Array,
+      type: [String],
       required: false,
+      index: true,
     },
     isDeleted: {
       type: Boolean,
