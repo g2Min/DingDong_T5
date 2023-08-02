@@ -62,13 +62,7 @@ export const HashTagNav = () => {
   }
 
   const foldImage = expanded ? {unfold} : {fold};
-
-  const onClickExpanded = () =>{
-    setExpanded( !expanded );
-  }
-
-  const foldImage = expanded ? {unfold} : {fold};
-
+  
   return(
     <NavBar>
       <Table $expanded={expanded? true : undefined}>
