@@ -39,6 +39,7 @@ export const HashTagNav = () => {
     fetchData();
   }, [setQuestionData]);
 
+
   let getHashtags: string[]= [];
   Array(QuestionData.length).fill(0).map((item, index) => {
     const values = QuestionData[index]?.hashtags.join(',');
@@ -55,6 +56,12 @@ export const HashTagNav = () => {
   }
   const forHash = sortByFrequency(realHash);
   const onlyHashtag = Array.from(new Set(forHash));
+
+  const onClickExpanded = () =>{
+    setExpanded( !expanded );
+  }
+
+  const foldImage = expanded ? {unfold} : {fold};
 
   const onClickExpanded = () =>{
     setExpanded( !expanded );
