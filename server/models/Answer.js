@@ -26,14 +26,31 @@ const AnswerSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    saves: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 );
 
+// 현재 UTC 시간을 기준으로 한국 시간으로 변환
+AnswerSchema.pre('save', function (next) {
+  const seoulTime = new Date(this.createdAt).toLocaleString('ko-KR', {
+    timeZone: 'Asia/Seoul',
+  });
+  this.createdAt = new Date(seoulTime);
+  next();
+});
+
 // Date 객체로 변환
-AnswerSchema.methods.convertDate = () => {
-  this.createdAt = new Date(this.createdAt);
-  this.updatedAt = new Date(this.updatedAt);
+AnswerSchema.methods.convertDate = function () {
+  this.createdAt = new Date(this.createdAt).toLocaleString('ko-KR', {
+    timeZone: 'Asia/Seoul',
+  });
+  this.updatedAt = new Date(this.updatedAt).toLocaleString('ko-KR', {
+    timeZone: 'Asia/Seoul',
+  });
   return this;
 };
 
