@@ -38,6 +38,16 @@ export const QuestionRow = ({ item }: QuestionRowProps) => {
     setSelectedNav(`/search`);
   };
 
+  const isValidQuestion = async (e: React.MouseEvent<HTMLAnchorElement>, questionId: any) => {
+    e.preventDefault();
+    const response = await axios.get(`/api/articles/valid/${questionId}`);
+    if (!response.data.isValid) {
+      alert('삭제된 질문입니다');
+    } else {
+      navigate(`/articles/${questionId}`);
+    }
+  };
+
   return (
     <TableRow key={item._id}>
       <TableCell>
@@ -63,10 +73,10 @@ export const QuestionRow = ({ item }: QuestionRowProps) => {
           </Box>
         </Info>
         <Context>
-          <Title onClick={() => navigate(`/articles/${item._id}`)}>
-            {/* <Link to={`/articles/${item._id}`} onClick={event => isValidQuestion(event, item._id)} > */}
-            {item.title}
-            {/* </Link> */}
+          <Title>
+            <Link to={`/articles/${item._id}`} onClick={event => isValidQuestion(event, item._id)}>
+              {item.title}
+            </Link>
           </Title>
           <Addition>
             <HashTagWrapper>

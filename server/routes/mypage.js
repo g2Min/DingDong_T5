@@ -188,7 +188,7 @@ router.get('/bookmarks/questions', authenticateToken, async (req, res) => {
   try {
     const bookmarks = await Bookmark.find({ userId: userIdFromToken });
     const questionIdList = bookmarks.map(bookmark => bookmark.questionId);
-    const [questions, copyQuestions] = await Promise.all([
+    /* const [questions, copyQuestions] = await Promise.all([
       Question.find({ _id: { $in: questionIdList }, isDeleted: false })
         .sort({ createdAt: -1 })
         .skip(startIndex)
@@ -215,11 +215,19 @@ router.get('/bookmarks/questions', authenticateToken, async (req, res) => {
           updatedAt: getFormattedDate(copyQuestion.updatedAt),
         };
       }),
-    );
+    ); */
 
-    const totalQuestions = populatedQuestions.length;
+    const questions = await Question.find({ _id: { $in: questionIdList }, isDeleted: false })
+      .sort({ createdAt: -1 })
+      .skip(startIndex)
+      .limit(pageSize)
+      .exec();
 
-    res.status(200).json({ updatedQuestions: populatedQuestions, totalQuestions });
+    const totalQuestions = questions.length;
+
+    console.log(questions);
+
+    res.status(200).json({ updatedQuestions: questions, totalQuestions });
   } catch (err) {
     res.status(500).json(err);
     console.log(err);
