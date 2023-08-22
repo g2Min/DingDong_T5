@@ -9,4 +9,5 @@ export const Advertisement = styled.img`
   top: 10px;
   width: 186px;
   height: 317px;
+  cursor: pointer;
 `;

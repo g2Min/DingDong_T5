@@ -6,6 +6,7 @@ export const Root = styled.div`
   display: flex;
   flex-direction: column;
   // border: 1px solid black;
+  width: 100vw;
   height: 100%;
 `;
 
@@ -25,7 +26,7 @@ export const LogoSection = styled.div`
   align-items: center;
   /* padding-right: 25px; */
   /* margin-right: 0px; */
-  margin-left: 25px;
+  margin-left: 60px;
   &:hover {
     cursor: pointer;
   }
