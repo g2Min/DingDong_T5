@@ -24,7 +24,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Articles from '../../db/articles.json';
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
-import { QuestionData, QuestionDataType, hashtagState } from 'stores/page-store';
+import { QuestionData, QuestionDataType, hashtagState, clickState } from 'stores/page-store';
 import DOMPurify from 'dompurify';
 import { useRecoilState } from 'recoil';
 import { PageState } from "../../stores/link-store";
@@ -44,6 +44,7 @@ interface AnswerDataType {
 export const Home = () => {
   const [user, setUser] = useState();
   const [currentPage, setCurrentPage] = useRecoilState(PageState);
+  const [clicked, setClicked] = useRecoilState(clickState);
   const [allArticle, setAllArticle] = useState<QuestionDataType[]>([]);
   const [topQuestion, setTopQuestion] = useState<QuestionDataType[]>([]);
   const [topAnswer, setTopAnswer] = useState<AnswerDataType[]>([]);
@@ -82,7 +83,7 @@ export const Home = () => {
     if (answer.questionId) {
       try {
         const response = await axios.get(`/api/articles/${answer.questionId}`);
-        const questionData = response.data;
+        const questionData = response.data;        
         navigate(`/articles/${answer.questionId}`);
       } catch (error) {
         alert('삭제된 질문글입니다.');
