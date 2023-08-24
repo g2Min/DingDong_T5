@@ -44,6 +44,20 @@ https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/8d8ee6c3-4df4-
 
 <br/>
 
+## 🧨 패키지설치
+- backend
+```
+cd server
+yarn install
+node server.js
+```
+- frontend
+```
+yarn install
+yarn start
+```
+<br/>
+
 ## 📚 기술 스택
 <b>Common</b>
 
