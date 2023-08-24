@@ -9,7 +9,8 @@
 ## 🧑‍💻 프로젝트 소개
 > 프로젝트명
 
-딩동 커뮤니티✈️
+딩동 커뮤니티✈️ <p>
+[딩동커뮤니티에 접속하고 싶다면? 클릭해주세요! 👀](https://dingdong-front.vercel.app/)
 <br/>
 
 > 프로젝트 목표
@@ -17,13 +18,82 @@
 하나의 게시글에서 독립적인 댓글이 허용된 커뮤니티로 댓글이 하나의 '객체'로 작용하도록 구현하는 것을 목표로 합니다.
 <br/>
 
-> 접근 방법
+> 과제 접근 방법
 
 사용자가 게시글, 답변 그리고 댓글을 스크랩하는 동작을 보이면 전체 복제본을 사용자가 가지게 됩니다.<p> 따라서 본문이나 다른 요소들이 삭제되더라도 저장된 요소는 사용자의 마이페이지에서 확인할 수 있습니다.
+<br/>
+
+## 🎞️ 시연영상
+> 비로그인 상태인 경우
+
+https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/600cb770-32b7-48e9-a07e-87b7f9f425e9
+
+<br/>
+
+> 로그인 상태인 경우
+
+<b>'탈중앙화'라는 프로젝트 특성을 가장 많이 반영한 부분입니다.<b/>
+
+https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/8d8ee6c3-4df4-4741-927b-1ef0b67dc947
+
 <br/>
 
 ## ⚙️ 시스템 아키텍처
 > 다음은 프로젝트 구조도입니다.
 <p align="center"><img src="https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/3d252e39-f579-42bc-9f2a-0e72bfe74c27" width="70%" height="50%"></p>
 
-## Tech stack
+## 📚 기술 스택
+<b>Common</b>
+
+<img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"> <img src="https://img.shields.io/badge/ESLint-4B3263?style=flat-square&logo=ESLint&logoColor=white"> <img src="https://img.shields.io/badge/prettier-F7B93E?style=flat-square&logo=prettier&logoColor=white"> <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=Vercel&logoColor=white"> 
+
+<b>Frontend</b>
+
+<img src="https://img.shields.io/badge/react-444444?style=flat-square&logo=react&logoColor=white"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white"> <img src="https://img.shields.io/badge/recoil-f26b00?style=flat-square&logo=recoil&logoColor=white"> <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white">
+
+
+<b>Backend</b>
+
+<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white">
+
+## 🫧 기대효과
+
+- 탈중앙적 구조의 Q&A 게시판으로 한 게시글에 속한 모든 요소들을 객체화시켰습니다.
+- 투표 기능을 추가하여 정보 판별에 유용합니다.
+- 해시태그 기능이 있어 정보를 카테고리화할 수 있습니다.
+- 검색기능을 추가하여 원하는 정보를 원활하게 찾을 수 있습니다.
+
+## 🗂️ 폴더구조
+### - public 
+### - server
+   admin ⇒ 관리자 모드 <br/>
+   middlewares ⇒ JWT 경로 저장파일 <br/>
+   models ⇒ 데이터 타입 관리 <br/>
+   routes ⇒ api 호출 관리 <br/>
+   utils ⇒ util 파일 관리 <br/>
+### - src
+  api ⇒ api 목록 <br/>
+  assets ⇒ 이미지와 icon 관리 <br/>
+  components ⇒ 공통 컴포넌트 관리 <br/>
+  db ⇒ mocking 데이터 관리 <br/>
+  pages ⇒ router 페이지 관리 <br/>
+  routes/Layout ⇒ router 기본 틀 컴포넌트 <br/>
+  stores ⇒ 리코일 관련 모듈 <br/>
+  utils ⇒ util 파일 관리 <br/>
+  types ⇒ 리코일 타입 지정 <br/>
+
+## 👻 팀원구성
+
+|       팀원       | 팀원 |       팀원       | 팀장 |
+|:--------------:|:--:|:--------------:|:--:|
+|    **공소연**     |**김민정**|    **윤석규**     |**이지민**|
+|     **FE**     |**BE**|   **BE**    |**FE**|
+|   **경제학과**   |**의생명공학과**|   **통계학과**   |**수학과**|
+|   **2020110210**   |**2019111791**|   **2020113296**   |**2020110408**|g
+
+## 🗝️ 팀원 역할
+
+<b> 공소연 : 게시글 • 댓글 • 답변 작성, 마이페이지, Replies페이지 ,전체 레이아웃 구현 <b/> <br/>
+<b> 김민정 : DB 설계, 게시글, 댓글, 답변, JWT로그인, 저장, 투표, 조회수, 해시태그 api 구현 <b/> <br/>
+<b> 윤석규:  로그인, 전체 해시태그 api 구현 <b> <br/>
+<b> 이지민 : 메인페이, 로그인페이지, Questions 페이지, 해시태그, 검색바 구현 <b/> <br/>
