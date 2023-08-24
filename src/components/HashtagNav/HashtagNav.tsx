@@ -65,12 +65,7 @@ export const HashTagNav = () => {
       setSelectedNav(`/search`);
       setClicked(false);
     }
-    // hashtag 'ALL'누른 경우
-    else if( !selectedNav.includes('replies') && !selectedNav.includes('search') && onlyHashtag[targetIndex] === 'ALL'){
-      navigate(`/articles`);
-      setSelectedNav(`/articles`);
-      setClicked(false);
-    }
+
   }, [clickedHashtags ]);
 
   useEffect(() => {
@@ -89,6 +84,8 @@ export const HashTagNav = () => {
       setSelectedNav(`/search`);
       setClicked(false);
     }
+    // console.log(clicked);
+    // console.log(selectedNav);
   }, [selectedNav]);
 
   const toggleExpanded = useCallback(() => {

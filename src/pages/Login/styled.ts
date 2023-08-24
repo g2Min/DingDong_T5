@@ -6,7 +6,8 @@ export const Root = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 260px;
+  justify-content: center;
+  height: 100vh;
 `;
 
 export const LogoSection = styled.div`

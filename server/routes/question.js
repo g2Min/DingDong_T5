@@ -234,8 +234,9 @@ router.get('/valid/:id', async (req, res) => {
     const questionId = req.params.id;
 
     const question = await Question.findOne({ _id: questionId, isDeleted: false });
+    const copyQuestion = await CopyQuestion.findOne({ _id: questionId, isDeleted: false });
 
-    if (question) {
+    if (question || copyQuestion) {
       // 유효한 질문 ID인 경우
       res.status(200).json({ isValid: true });
     } else {
