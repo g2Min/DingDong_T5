@@ -42,6 +42,8 @@ https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/8d8ee6c3-4df4-
 > 다음은 프로젝트 구조도입니다.
 <p align="center"><img src="https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/3d252e39-f579-42bc-9f2a-0e72bfe74c27" width="70%" height="50%"></p>
 
+<br/>
+
 ## 📚 기술 스택
 <b>Common</b>
 
@@ -56,12 +58,16 @@ https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/8d8ee6c3-4df4-
 
 <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white">
 
+<br/>
+
 ## 🫧 기대효과
 
 - 탈중앙적 구조의 Q&A 게시판으로 한 게시글에 속한 모든 요소들을 객체화시켰습니다.
 - 투표 기능을 추가하여 정보 판별에 유용합니다.
 - 해시태그 기능이 있어 정보를 카테고리화할 수 있습니다.
 - 검색기능을 추가하여 원하는 정보를 원활하게 찾을 수 있습니다.
+
+<br/>
 
 ## 🗂️ 폴더구조
 ### - public 
@@ -82,6 +88,8 @@ https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/8d8ee6c3-4df4-
   utils ⇒ util 파일 관리 <br/>
   types ⇒ 리코일 타입 지정 <br/>
 
+<br/>
+
 ## 👻 팀원구성
 
 |       팀원       | 팀원 |       팀원       | 팀장 |
@@ -91,9 +99,11 @@ https://github.com/CSID-DGU/2023-S-VSA-DingDong-5/assets/96400257/8d8ee6c3-4df4-
 |   **경제학과**   |**의생명공학과**|   **통계학과**   |**수학과**|
 |   **2020110210**   |**2019111791**|   **2020113296**   |**2020110408**|g
 
+<br/>
+
 ## 🗝️ 팀원 역할
 
-<b> 공소연 : 게시글 • 댓글 • 답변 작성, 마이페이지, Replies페이지 ,전체 레이아웃 구현 <b/> <br/>
-<b> 김민정 : DB 설계, 게시글, 댓글, 답변, JWT로그인, 저장, 투표, 조회수, 해시태그 api 구현 <b/> <br/>
-<b> 윤석규:  로그인, 전체 해시태그 api 구현 <b> <br/>
-<b> 이지민 : 메인페이, 로그인페이지, Questions 페이지, 해시태그, 검색바 구현 <b/> <br/>
+<b> 공소연 <b/> : 게시글 • 댓글 • 답변 작성, 마이페이지, Replies페이지 ,전체 레이아웃 구현 <br/>
+<b> 김민정 <b/> : DB 설계, 게시글, 댓글, 답변, JWT로그인, 저장, 투표, 조회수, 해시태그 api 구현 <br/>
+<b> 윤석규 <b/> :  로그인, 전체 해시태그 api 구현 <br/>
+<b> 이지민 <b/> : 메인페이, 로그인페이지, Questions 페이지, 해시태그, 검색바 구현 <br/>
